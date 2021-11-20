@@ -1,0 +1,24 @@
+Hahn.ApplicatonProcess.July2021.Data 
+Hahn.ApplicatonProcess.July2021.Web
+Hahn.ApplicatonProcess.July2021.Domain
+
+The solution must contain the needed docker files and docker-compose to run the application 
+out of the box in docker environment.
+
+----------------------------
+Models
+Asset: 
+	Id: string
+	Symbol: string
+	Name: string
+User:
+	Id: int
+	Age: int
+	FirstName: string
+	LastName: string
+	Address: 
+			 postal code : string
+			 street : string 
+			 house number :: string
+	Email: string
+	Assets: Asset[

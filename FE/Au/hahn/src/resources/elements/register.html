@@ -1,0 +1,90 @@
+<template>
+  <require from="../attributes/disabledIfNotValid"></require>
+  <div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+    <div class="card card0 border-0">
+      <div class="row d-flex">
+       
+        <div class="col-lg-8">
+          <div class="card ">
+            <section>
+              
+              <h2>${heading}</h2>
+              <form class="form-horizontal" change.delegate="change()" submit.delegate="signup()" validation-renderer="bootstrap-form">
+
+
+                <div class="form-group">
+                  <div class="md9">  <label class="control-label" for="first">First Name</label></div>
+                 
+                  <input type="text" class="form-control" id="FirstName" placeholder="First Name"
+                    value.bind="userInfo.FirstName & validate">
+                </div>
+                <div class="form-group">
+                  <label class="control-label" for="first">Last Name</label>
+                  <input type="text" class="form-control" id="LastName" placeholder="Last Name"
+                    value.bind="userInfo.LastName & validate">
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="text" value.bind="userInfo.Email & validate" class="form-control" id="Email"
+                    placeholder="Email">
+                  <span class="help-text">
+                </div>
+                <div class="form-group">
+                  <label for="Age">Age</label>
+                  <input type="number" value.bind="userInfo.Age & validate" class="form-control" id="Age"
+                    placeholder="Age">
+                </div>
+                <div class="form-group">
+                  <label for="email">UserName</label>
+                  <input type="text" value.bind="userInfo.Username & validate" class="form-control" id="Username"
+                    placeholder="Username">
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" value.bind="userInfo.password  & validate" class="form-control" id="password"
+                    placeholder="Password">
+                  <span class="help-text">
+                </div>
+
+
+                <div class="form-group">
+                  <div class="col-md-4">
+                    <label for="email">houseNumber</label>
+                    <input type="text" value.bind="userInfo.Address.houseNumber  & validate" class="form-control"
+                      id="houseNumber" placeholder="houseNumber">
+                  </div>
+                  <div class="col-md-4">
+                    <label for="email">street</label>
+                    <input type="text" value.bind="userInfo.Address.street  & validate" class="form-control" id="street"
+                      placeholder="street">
+
+                  </div>
+                  <div class="col-md-4">
+                    <label for="postalCode">postalCode</label>
+                    <input type="text" value.bind="userInfo.Address.postalCode  & validate" class="form-control"
+                      id="postalCode" placeholder="postalCode">
+                  </div>
+                </div>
+                <button disabled-if-not-valid="${validationController.errors}" type="submit" 
+                class="btn btn-primary">Register</button>
+                <button disabled-if-empty="${isFormChanged}" type="submit" class="btn btn-primary" click.delegate="clear()">reset</button>
+
+              </form>
+              <hr>
+              <div class="alert alert-danger" if.bind="signupError">${signupError}</div>
+              <ul class="col-sm-9 col-sm-offset-3 list-group text-danger" if.bind="validationController.errors">
+                <li repeat.for="error of validationController.errors" class="list-group-item">
+                  ${error.message}
+                </li>
+              </ul>
+            </section>
+
+          </div>
+        </div>
+        <div class="col-lg-6"></div>
+      </div>
+    </div>
+  </div>
+
+</template>

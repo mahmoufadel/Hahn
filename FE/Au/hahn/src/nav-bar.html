@@ -1,0 +1,18 @@
+<template bindable="router">
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">     
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li repeat.for="row of router.navigation | authFilter: isAuthenticated ">
+            <a class="nav-link scrollto ${row.isActive ? 'active' : ''}" href.bind="row.href" class="nav-link">${row.title}</a>
+          </li>          
+        </ul>
+       
+      </nav><!-- .navbar -->
+
+    </div>
+  </header>
+
+  
+</template>

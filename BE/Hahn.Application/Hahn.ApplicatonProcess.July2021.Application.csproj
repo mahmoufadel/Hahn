@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="FluentMediator" Version="0.4.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hahn.Cache.Redis\Hahn.Cache.Redis.csproj" />
+    <ProjectReference Include="..\Hahn.Domain\Hahn.ApplicatonProcess.July2021.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

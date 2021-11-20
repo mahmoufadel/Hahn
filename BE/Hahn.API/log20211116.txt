@@ -1,0 +1,256 @@
+2021-11-16 22:03:55.831 +02:00 [INF] Starting Web Host
+2021-11-16 22:03:58.619 +02:00 [INF] User profile is available. Using 'C:\Users\mahmoud.fadel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-16 22:04:00.128 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-16 22:04:00.128 +02:00 [INF] Hosting environment: Development
+2021-11-16 22:04:00.128 +02:00 [INF] Content root path: D:\Hahn\Code\MTM.API
+2021-11-16 22:04:00.300 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44348/swagger/index.html - -
+2021-11-16 22:04:01.647 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44348/swagger/index.html - - - 200 - text/html;charset=utf-8 1391.9310ms
+2021-11-16 22:04:01.685 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44348/_framework/aspnetcore-browser-refresh.js - -
+2021-11-16 22:04:01.698 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44348/_framework/aspnetcore-browser-refresh.js - - - 200 11969 application/javascript;+charset=utf-8 10.3072ms
+2021-11-16 22:04:01.863 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44348/swagger/v1/swagger.json - -
+2021-11-16 22:04:01.994 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44348/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 131.0083ms
+2021-11-16 22:04:37.244 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44348/api/User/GetAll - -
+2021-11-16 22:04:37.382 +02:00 [INF] Executing endpoint 'MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web)'
+2021-11-16 22:04:37.414 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Hahn.ApplicatonProcess.July2021.Domain.UserDto]] GetAll() on controller MTM.API.Controllers.UserController (Hahn.ApplicatonProcess.July2021.Web).
+2021-11-16 22:04:38.730 +02:00 [INF] Entity Framework Core 5.0.11 initialized 'EFCoreHahnContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-11-16 22:04:38.920 +02:00 [INF] Executing action method MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web) - Validation state: "Valid"
+2021-11-16 22:04:38.926 +02:00 [INF] GetAll
+2021-11-16 22:04:40.311 +02:00 [INF] Executed DbCommand (139ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[Age], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a0].[AddressId], [a0].[HouseNumber], [a0].[PostalCode], [a0].[Street], [a0].[UserId]
+FROM [AspNetUsers] AS [a]
+LEFT JOIN [Address] AS [a0] ON [a].[Id] = [a0].[UserId]
+2021-11-16 22:04:40.562 +02:00 [INF] Executed action method MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1632.5997ms.
+2021-11-16 22:04:40.571 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hahn.ApplicatonProcess.July2021.Domain.UserDto, Hahn.ApplicatonProcess.July2021.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-16 22:04:40.588 +02:00 [INF] Executed action MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web) in 3168.6088ms
+2021-11-16 22:04:40.588 +02:00 [INF] Executed endpoint 'MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web)'
+2021-11-16 22:04:40.597 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44348/api/User/GetAll - - - 200 - application/json;+charset=utf-8 3352.5227ms
+2021-11-16 22:18:03.985 +02:00 [INF] Starting Web Host
+2021-11-16 22:18:08.581 +02:00 [INF] User profile is available. Using 'C:\Users\mahmoud.fadel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-16 22:18:10.382 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-16 22:18:10.383 +02:00 [INF] Hosting environment: Development
+2021-11-16 22:18:10.383 +02:00 [INF] Content root path: D:\Hahn\Code\MTM.API
+2021-11-16 22:18:10.488 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44348/swagger/index.html - -
+2021-11-16 22:18:11.964 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44348/swagger/index.html - - - 200 - text/html;charset=utf-8 1522.3466ms
+2021-11-16 22:18:11.981 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44348/_framework/aspnetcore-browser-refresh.js - -
+2021-11-16 22:18:11.987 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44348/_framework/aspnetcore-browser-refresh.js - - - 200 11969 application/javascript;+charset=utf-8 5.6030ms
+2021-11-16 22:18:12.184 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44348/swagger/v1/swagger.json - -
+2021-11-16 22:18:12.433 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44348/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 249.7221ms
+2021-11-16 22:18:51.478 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44348/api/User/GetAll - -
+2021-11-16 22:18:51.623 +02:00 [INF] Executing endpoint 'MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web)'
+2021-11-16 22:18:51.655 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Hahn.ApplicatonProcess.July2021.Domain.UserDto]] GetAll() on controller MTM.API.Controllers.UserController (Hahn.ApplicatonProcess.July2021.Web).
+2021-11-16 22:18:52.807 +02:00 [INF] Entity Framework Core 5.0.11 initialized 'EFCoreHahnContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-11-16 22:18:52.984 +02:00 [INF] Executing action method MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web) - Validation state: "Valid"
+2021-11-16 22:18:52.989 +02:00 [INF] GetAll
+2021-11-16 22:18:54.456 +02:00 [INF] Executed DbCommand (156ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[Age], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a0].[AddressId], [a0].[HouseNumber], [a0].[PostalCode], [a0].[Street], [a0].[UserId]
+FROM [AspNetUsers] AS [a]
+LEFT JOIN [Address] AS [a0] ON [a].[Id] = [a0].[UserId]
+2021-11-16 22:18:54.707 +02:00 [INF] Executed action method MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1709.0461ms.
+2021-11-16 22:18:54.715 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hahn.ApplicatonProcess.July2021.Domain.UserDto, Hahn.ApplicatonProcess.July2021.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-16 22:18:54.744 +02:00 [INF] Executed action MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web) in 3076.7122ms
+2021-11-16 22:18:54.744 +02:00 [INF] Executed endpoint 'MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web)'
+2021-11-16 22:18:54.756 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44348/api/User/GetAll - - - 200 - application/json;+charset=utf-8 3277.6307ms
+2021-11-16 22:19:19.758 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44348/api/User/GetAll - -
+2021-11-16 22:19:19.760 +02:00 [INF] Executing endpoint 'MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web)'
+2021-11-16 22:19:19.761 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Hahn.ApplicatonProcess.July2021.Domain.UserDto]] GetAll() on controller MTM.API.Controllers.UserController (Hahn.ApplicatonProcess.July2021.Web).
+2021-11-16 22:19:19.870 +02:00 [INF] Entity Framework Core 5.0.11 initialized 'EFCoreHahnContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-11-16 22:19:19.899 +02:00 [INF] Executing action method MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web) - Validation state: "Valid"
+2021-11-16 22:19:19.899 +02:00 [INF] GetAll
+2021-11-16 22:19:19.990 +02:00 [INF] Executed DbCommand (86ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[Age], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a0].[AddressId], [a0].[HouseNumber], [a0].[PostalCode], [a0].[Street], [a0].[UserId]
+FROM [AspNetUsers] AS [a]
+LEFT JOIN [Address] AS [a0] ON [a].[Id] = [a0].[UserId]
+2021-11-16 22:19:20.014 +02:00 [INF] Executed action method MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 114.4086ms.
+2021-11-16 22:19:20.014 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hahn.ApplicatonProcess.July2021.Domain.UserDto, Hahn.ApplicatonProcess.July2021.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-16 22:19:20.014 +02:00 [INF] Executed action MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web) in 253.2946ms
+2021-11-16 22:19:20.015 +02:00 [INF] Executed endpoint 'MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web)'
+2021-11-16 22:19:20.015 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44348/api/User/GetAll - - - 200 - application/json;+charset=utf-8 257.3210ms
+2021-11-16 22:23:27.966 +02:00 [INF] Starting Web Host
+2021-11-16 22:23:36.058 +02:00 [INF] User profile is available. Using 'C:\Users\mahmoud.fadel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-16 22:23:38.987 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-16 22:23:38.988 +02:00 [INF] Hosting environment: Development
+2021-11-16 22:23:38.988 +02:00 [INF] Content root path: D:\Hahn\Code\MTM.API
+2021-11-16 22:23:39.193 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44348/swagger/index.html - -
+2021-11-16 22:23:41.131 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44348/swagger/index.html - - - 200 - text/html;charset=utf-8 1984.3389ms
+2021-11-16 22:23:41.149 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44348/_framework/aspnetcore-browser-refresh.js - -
+2021-11-16 22:23:41.158 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44348/_framework/aspnetcore-browser-refresh.js - - - 200 11969 application/javascript;+charset=utf-8 5.6573ms
+2021-11-16 22:23:41.464 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44348/swagger/v1/swagger.json - -
+2021-11-16 22:23:41.635 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44348/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 170.3560ms
+2021-11-16 22:23:55.102 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44348/api/User/GetAll - -
+2021-11-16 22:23:55.221 +02:00 [INF] Executing endpoint 'MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web)'
+2021-11-16 22:23:55.311 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Hahn.ApplicatonProcess.July2021.Domain.UserDto]] GetAll() on controller MTM.API.Controllers.UserController (Hahn.ApplicatonProcess.July2021.Web).
+2021-11-16 22:23:56.779 +02:00 [INF] Entity Framework Core 5.0.11 initialized 'EFCoreHahnContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-11-16 22:23:56.945 +02:00 [INF] Executing action method MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web) - Validation state: "Valid"
+2021-11-16 22:23:56.949 +02:00 [INF] GetAll
+2021-11-16 22:23:58.408 +02:00 [INF] Executed DbCommand (160ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[Age], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a0].[AddressId], [a0].[HouseNumber], [a0].[PostalCode], [a0].[Street], [a0].[UserId]
+FROM [AspNetUsers] AS [a]
+LEFT JOIN [Address] AS [a0] ON [a].[Id] = [a0].[UserId]
+2021-11-16 22:23:58.694 +02:00 [INF] Executed action method MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1737.551ms.
+2021-11-16 22:23:58.710 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hahn.ApplicatonProcess.July2021.Domain.UserDto, Hahn.ApplicatonProcess.July2021.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-16 22:23:58.735 +02:00 [INF] Executed action MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web) in 3418.3176ms
+2021-11-16 22:23:58.736 +02:00 [INF] Executed endpoint 'MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web)'
+2021-11-16 22:23:58.749 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44348/api/User/GetAll - - - 200 - application/json;+charset=utf-8 3646.9441ms
+2021-11-16 22:24:25.566 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44348/api/User/GetAll - -
+2021-11-16 22:24:25.571 +02:00 [INF] Executing endpoint 'MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web)'
+2021-11-16 22:24:25.572 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Hahn.ApplicatonProcess.July2021.Domain.UserDto]] GetAll() on controller MTM.API.Controllers.UserController (Hahn.ApplicatonProcess.July2021.Web).
+2021-11-16 22:24:25.623 +02:00 [INF] Entity Framework Core 5.0.11 initialized 'EFCoreHahnContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-11-16 22:24:25.680 +02:00 [INF] Executing action method MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web) - Validation state: "Valid"
+2021-11-16 22:24:25.680 +02:00 [INF] GetAll
+2021-11-16 22:24:25.788 +02:00 [INF] Executed DbCommand (90ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[Age], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a0].[AddressId], [a0].[HouseNumber], [a0].[PostalCode], [a0].[Street], [a0].[UserId]
+FROM [AspNetUsers] AS [a]
+LEFT JOIN [Address] AS [a0] ON [a].[Id] = [a0].[UserId]
+2021-11-16 22:24:25.830 +02:00 [INF] Executed action method MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 150.1919ms.
+2021-11-16 22:24:25.831 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hahn.ApplicatonProcess.July2021.Domain.UserDto, Hahn.ApplicatonProcess.July2021.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-16 22:24:25.831 +02:00 [INF] Executed action MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web) in 259.3564ms
+2021-11-16 22:24:25.831 +02:00 [INF] Executed endpoint 'MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web)'
+2021-11-16 22:24:25.832 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44348/api/User/GetAll - - - 200 - application/json;+charset=utf-8 266.2047ms
+2021-11-16 22:24:37.021 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44348/api/User/GetAll - -
+2021-11-16 22:24:37.026 +02:00 [INF] Executing endpoint 'MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web)'
+2021-11-16 22:24:37.026 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Hahn.ApplicatonProcess.July2021.Domain.UserDto]] GetAll() on controller MTM.API.Controllers.UserController (Hahn.ApplicatonProcess.July2021.Web).
+2021-11-16 22:24:37.043 +02:00 [INF] Entity Framework Core 5.0.11 initialized 'EFCoreHahnContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-11-16 22:24:37.099 +02:00 [INF] Executing action method MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web) - Validation state: "Valid"
+2021-11-16 22:24:37.099 +02:00 [INF] GetAll
+2021-11-16 22:24:37.192 +02:00 [INF] Executed DbCommand (92ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[Age], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a0].[AddressId], [a0].[HouseNumber], [a0].[PostalCode], [a0].[Street], [a0].[UserId]
+FROM [AspNetUsers] AS [a]
+LEFT JOIN [Address] AS [a0] ON [a].[Id] = [a0].[UserId]
+2021-11-16 22:24:37.193 +02:00 [INF] Executed action method MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 93.7112ms.
+2021-11-16 22:24:37.194 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hahn.ApplicatonProcess.July2021.Domain.UserDto, Hahn.ApplicatonProcess.July2021.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-16 22:24:37.222 +02:00 [INF] Executed action MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web) in 195.9927ms
+2021-11-16 22:24:37.222 +02:00 [INF] Executed endpoint 'MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web)'
+2021-11-16 22:24:37.223 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44348/api/User/GetAll - - - 200 - application/json;+charset=utf-8 201.8160ms
+2021-11-16 22:30:55.011 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44348/api/User/GetAll - -
+2021-11-16 22:30:55.011 +02:00 [INF] Executing endpoint 'MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web)'
+2021-11-16 22:30:55.012 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Hahn.ApplicatonProcess.July2021.Domain.UserDto]] GetAll() on controller MTM.API.Controllers.UserController (Hahn.ApplicatonProcess.July2021.Web).
+2021-11-16 22:30:55.012 +02:00 [INF] Entity Framework Core 5.0.11 initialized 'EFCoreHahnContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-11-16 22:30:55.073 +02:00 [INF] Executing action method MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web) - Validation state: "Valid"
+2021-11-16 22:30:55.073 +02:00 [INF] GetAll
+2021-11-16 22:30:55.558 +02:00 [INF] Executed DbCommand (100ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[Age], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a0].[AddressId], [a0].[HouseNumber], [a0].[PostalCode], [a0].[Street], [a0].[UserId]
+FROM [AspNetUsers] AS [a]
+LEFT JOIN [Address] AS [a0] ON [a].[Id] = [a0].[UserId]
+2021-11-16 22:30:55.562 +02:00 [INF] Executed action method MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 489.3646ms.
+2021-11-16 22:30:55.562 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hahn.ApplicatonProcess.July2021.Domain.UserDto, Hahn.ApplicatonProcess.July2021.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-16 22:30:55.604 +02:00 [INF] Executed action MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web) in 592.6069ms
+2021-11-16 22:30:55.605 +02:00 [INF] Executed endpoint 'MTM.API.Controllers.UserController.GetAll (Hahn.ApplicatonProcess.July2021.Web)'
+2021-11-16 22:30:55.606 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44348/api/User/GetAll - - - 200 - application/json;+charset=utf-8 594.8764ms
+2021-11-16 22:31:54.015 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44348/api/Asset/GetAll - -
+2021-11-16 22:31:54.028 +02:00 [INF] Executing endpoint 'MTM.API.Controllers.AssetController.GetAll (Hahn.ApplicatonProcess.July2021.Web)'
+2021-11-16 22:31:54.044 +02:00 [INF] Route matched with {action = "GetAll", controller = "Asset"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Hahn.Application.Services.Inventory.Dto.AssetDto]] GetAll() on controller MTM.API.Controllers.AssetController (Hahn.ApplicatonProcess.July2021.Web).
+2021-11-16 22:31:54.068 +02:00 [INF] Executing action method MTM.API.Controllers.AssetController.GetAll (Hahn.ApplicatonProcess.July2021.Web) - Validation state: "Valid"
+2021-11-16 22:31:55.582 +02:00 [INF] Executed action MTM.API.Controllers.AssetController.GetAll (Hahn.ApplicatonProcess.July2021.Web) in 1538.4385ms
+2021-11-16 22:31:55.596 +02:00 [INF] Executed endpoint 'MTM.API.Controllers.AssetController.GetAll (Hahn.ApplicatonProcess.July2021.Web)'
+2021-11-16 22:31:55.601 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: Y. Path '', line 0, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonReader.ReadAndMoveToContent()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at Hahn.ApplicatonProcess.July2021.Data.Repositories.AssetRepository.GetAll() in D:\Hahn\Code\MTM.Infra\Repositories\AssetRepository.cs:line 54
+   at Hahn.ApplicatonProcess.July2021.Application.AssetService.GetAll() in D:\Hahn\Code\MTM.Application\Services\Assets\AssetService.cs:line 48
+   at MTM.API.Controllers.AssetController.GetAll() in D:\Hahn\Code\MTM.API\Controllers\AssetController.cs:line 38
+   at lambda_method157(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-11-16 22:31:55.727 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44348/api/Asset/GetAll - - - 500 - text/plain 1712.5654ms
+2021-11-16 22:32:04.075 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44348/api/Asset/GetAll - -
+2021-11-16 22:32:04.076 +02:00 [INF] Executing endpoint 'MTM.API.Controllers.AssetController.GetAll (Hahn.ApplicatonProcess.July2021.Web)'
+2021-11-16 22:32:04.076 +02:00 [INF] Route matched with {action = "GetAll", controller = "Asset"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Hahn.Application.Services.Inventory.Dto.AssetDto]] GetAll() on controller MTM.API.Controllers.AssetController (Hahn.ApplicatonProcess.July2021.Web).
+2021-11-16 22:32:04.106 +02:00 [INF] Executing action method MTM.API.Controllers.AssetController.GetAll (Hahn.ApplicatonProcess.July2021.Web) - Validation state: "Valid"
+2021-11-16 22:32:04.893 +02:00 [INF] Executed action MTM.API.Controllers.AssetController.GetAll (Hahn.ApplicatonProcess.July2021.Web) in 816.7124ms
+2021-11-16 22:32:04.893 +02:00 [INF] Executed endpoint 'MTM.API.Controllers.AssetController.GetAll (Hahn.ApplicatonProcess.July2021.Web)'
+2021-11-16 22:32:04.897 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: Y. Path '', line 0, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonReader.ReadAndMoveToContent()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at Hahn.ApplicatonProcess.July2021.Data.Repositories.AssetRepository.GetAll() in D:\Hahn\Code\MTM.Infra\Repositories\AssetRepository.cs:line 54
+   at Hahn.ApplicatonProcess.July2021.Application.AssetService.GetAll() in D:\Hahn\Code\MTM.Application\Services\Assets\AssetService.cs:line 48
+   at MTM.API.Controllers.AssetController.GetAll() in D:\Hahn\Code\MTM.API\Controllers\AssetController.cs:line 38
+   at lambda_method157(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-11-16 22:32:04.900 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44348/api/Asset/GetAll - - - 500 - text/plain 824.5169ms
+2021-11-16 22:52:12.555 +02:00 [INF] Starting Web Host
+2021-11-16 22:53:04.518 +02:00 [INF] GetAll
+2021-11-16 22:53:24.702 +02:00 [INF] GetAll
+2021-11-16 23:13:45.326 +02:00 [INF] Starting Web Host
+2021-11-16 23:13:52.237 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/User/Get" for actions - MTM.API.Controllers.UserController.Get (Hahn.ApplicatonProcess.July2021.Web),MTM.API.Controllers.UserController.TrackAssets (Hahn.ApplicatonProcess.July2021.Web). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-11-16 23:14:29.705 +02:00 [INF] Starting Web Host
+2021-11-16 23:19:33.468 +02:00 [INF] Starting Web Host
+2021-11-16 23:25:20.959 +02:00 [INF] Starting Web Host
+2021-11-16 23:32:11.638 +02:00 [INF] Starting Web Host
+2021-11-16 23:44:41.362 +02:00 [INF] Starting Web Host
+2021-11-16 23:45:03.344 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: Y. Path '', line 0, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonReader.ReadAndMoveToContent()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at Hahn.ApplicatonProcess.July2021.Data.Repositories.AssetRepository.GetAll() in D:\Hahn\Code\MTM.Infra\Repositories\AssetRepository.cs:line 54
+   at Hahn.ApplicatonProcess.July2021.Application.AssetService.GetAll() in D:\Hahn\Code\MTM.Application\Services\Assets\AssetService.cs:line 53
+   at Hahn.ApplicatonProcess.July2021.Application.AssetService.Validate(List`1 assetDtos) in D:\Hahn\Code\MTM.Application\Services\Assets\AssetService.cs:line 62
+   at MTM.API.Controllers.UserController.TrackAssets(String UserName, List`1 assetDtos) in D:\Hahn\Code\MTM.API\Controllers\UserController.cs:line 51
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-11-16 23:54:38.482 +02:00 [INF] Starting Web Host

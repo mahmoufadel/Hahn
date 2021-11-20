@@ -1,0 +1,31 @@
+<template>
+  <require from="../../blur-image"></require>
+
+  <section class="au-animate">
+    <h2>${heading}</h2>
+    <div class="row au-stagger">
+      <a  class="btn btn-light" href="#" click.trigger="trackAssets()">Update Assets</a>
+            
+      <div class="col-sm-3 col-md-3 card-container au-animate" repeat.for="asset of assets">
+        <div class="card">
+          <canvas class="header-bg" width="250" height="70" blur-image.bind="image"></canvas>
+          <div class="avatar">
+            <img src="../../../static/asset.png" crossorigin ref="image" />
+          </div>
+          <div class="content">
+            <p class="name">${asset.name}</p>
+            <p>
+              <a show.bind="!asset.tracked" class="btn " href="#" click.trigger="addAsset(asset.id)">
+                <i class="fa fa-plus fa-3x" aria-hidden="true"></i>
+              </a>
+              <a show.bind="asset.tracked" target="_blank" class="btn " href="#" click.trigger="removeAsset(asset.id)">
+                <i class="fa fa-minus fa-3x" aria-hidden="true"></i>
+              </a>
+           
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>

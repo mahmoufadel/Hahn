@@ -1,0 +1,21 @@
+<template>
+  <require from="../../blur-image"></require>
+
+  <section class="au-animate">
+    <h2>${heading}</h2>
+    <div class="row au-stagger">
+      <div class="col-sm-3 col-md-4 card-container au-animate" repeat.for="asset of assets">
+        <div class="card">
+          <canvas class="header-bg" width="250" height="70" blur-image.bind="image"></canvas>
+          <div class="avatar">
+            <img src="../../../static/asset.png" crossorigin ref="image" />
+           
+          </div>
+          <div class="content">
+            <p class="name">${asset.name}</p>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
