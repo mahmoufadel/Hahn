@@ -3,12 +3,18 @@
 
   <section class="au-animate">
     <h2>${heading}</h2>
-    <div class="row au-stagger">
-      <a  class="btn btn-light" href="#" click.trigger="trackAssets()">Update Assets</a>
-            
-      <div class="col-sm-3 col-md-3 card-container au-animate" repeat.for="asset of assets">
+    <div class="row au-stagger">     
+      <div class="form-group">
+        <div class="col-sm-9 col-sm-offset-3">
+          <button type="button" class="btn btn-primary" click.delegate="trackUserAssets()">
+            <i class="fa fa-plus-square-o"></i> Update Assets
+          </button>
+        </div>
+      </div>
+
+      <div class="col-sm-3 col-md-2 card-container au-animate" repeat.for="asset of assets">
         <div class="card">
-          <canvas class="header-bg" width="250" height="70" blur-image.bind="image"></canvas>
+          
           <div class="avatar">
             <img src="../../../static/asset.png" crossorigin ref="image" />
           </div>
@@ -21,11 +27,14 @@
               <a show.bind="asset.tracked" target="_blank" class="btn " href="#" click.trigger="removeAsset(asset.id)">
                 <i class="fa fa-minus fa-3x" aria-hidden="true"></i>
               </a>
-           
+
             </p>
           </div>
         </div>
       </div>
+     
+            
+         
     </div>
   </section>
 </template>

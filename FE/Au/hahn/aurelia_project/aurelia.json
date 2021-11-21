@@ -40,6 +40,16 @@
           "name": "i18next-xhr-backend",
           "path": "../node_modules/i18next-xhr-backend/dist/umd",
           "main": "i18nextXHRBackend"
+        },
+        { 
+          "name": "aurelia-dialog", 
+          "path": "../node_modules/aurelia-dialog/dist/amd", 
+          "main": "aurelia-dialog" 
+        },
+        {
+          "name": "aurelia-plugins-tabs",
+          "path": "../node_modules/aurelia-plugins-tabs/dist/amd",
+          "main": "aurelia-plugins-tabs"
         }
       ]
     }

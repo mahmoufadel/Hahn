@@ -1,0 +1,16 @@
+<template bindable="assets">
+  <div class="row">
+  <div class="col-sm-3 col-md-3 card-container au-animate" repeat.for="asset of assets">
+    <div class="card">
+      
+      <div class="avatar">
+        <img src="../../../static/asset.png" crossorigin ref="image" />
+      </div>
+      <div class="content">
+        <p class="name">${asset.name}</p>
+        
+      </div>
+    </div>
+  </div>
+  </div>
+</template>

@@ -12,8 +12,8 @@ export function configure(aurelia: Aurelia): void {
     .standardConfiguration()
     .developmentLogging()
     
-    //.plugin(PLATFORM.moduleName('aurelia-form'))
-    
+    .plugin(PLATFORM.moduleName('aurelia-plugins-tabs'))
+    .plugin(PLATFORM.moduleName('aurelia-dialog')) 
     .plugin(PLATFORM.moduleName('aurelia-validation'))
     .plugin(PLATFORM.moduleName('aurelia-auth/auth-filter'))
     .plugin(PLATFORM.moduleName('aurelia-auth'), (baseConfig)=>{

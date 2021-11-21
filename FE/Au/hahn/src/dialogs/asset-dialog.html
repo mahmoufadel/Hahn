@@ -1,0 +1,43 @@
+<template>
+  <ai-dialog>
+    <form class="form-horizontal" validation-renderer="bootstrap-form" submit.delegate="ok()">
+      <ai-dialog-body>
+       
+          <h2>Tracked Assets</h2> 
+          <aup-tabs class="nav-tabs" tabs.bind="myTabs" translate="true" active-tab-id.two-way="activeTabId"></aup-tabs>
+          <aup-tab-content>
+            <aup-tab-pane tab="old" class="active">
+              
+              <compose view="../resources/elements/asset.html" view-model.bind="{ assets: old }"></compose> 
+            </aup-tab-pane>
+            <aup-tab-pane tab="all">
+              
+              <compose view="../resources/elements/asset.html" view-model.bind="{ assets: assets }"></compose> 
+          </aup-tab-pane>
+            <aup-tab-pane tab="added">
+             
+              <compose view="../resources/elements/asset.html" view-model.bind="{ assets: added }"></compose>          
+            </aup-tab-pane>
+            
+          <aup-tab-pane tab="removed">
+            
+            <compose view="../resources/elements/asset.html"view-model.bind="{ assets: removed }"  ></compose> 
+          </aup-tab-pane>
+             </aup-tab-content>
+
+         
+
+               
+     
+                
+           
+      
+      </ai-dialog-body>
+
+      <ai-dialog-footer>
+        <button type="submit" class="btn btn-primary">Ok</button>
+        <button class="btn btn-danger" click.trigger="cancel()">Cancel</button>
+      </ai-dialog-footer>
+    </form>
+  </ai-dialog>
+</template>
