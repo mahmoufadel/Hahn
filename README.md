@@ -1,6 +1,6 @@
 # Mahmoud Fadel Hahn Task
 <div>
-                <h2>Back end (.Net Core 5)</h2>
+                <h2>Back end (.Net Core 5)</h2>   
                 <img
                   src="https://user-images.githubusercontent.com/6877794/142911699-323a7c68-bd94-421c-85b0-b1c1392d2209.png"
                   alt="Logo" width="80" height="80">
@@ -18,17 +18,18 @@
                   </ul>
                 </li>
                 <li class="list-group-item">Swashbuckle Swagger</li>
-                <li class="list-group-item">Rest API
+                <li class="list-group-item">Rest API (3)
                   <ul class="list-group">
                     <li class="list-group-item">Authenticate (Login and Register new users) </li>
                     <li class="list-group-item">User : Get User info with their tarcked assets and assign . </li>
                     <li class="list-group-item">Asset : Get all Assets from live service </li>
                   </ul>
                 </li>
+                <li class="list-group-item">serilog (file) </li>
                 <li class="list-group-item">Jwt Bearer </li>
-                <li class="list-group-item">Microsoft Identity </li>
-                <li class="list-group-item">Xunit Testing</li>
-                <li class="list-group-item">Mapper</li>
+                <li class="list-group-item">Microsoft Identity : Used for Login and register new users</li>
+                <li class="list-group-item">Xunit Testing : Used to test all API service using Xunit IOC</li>
+                <li class="list-group-item">Auto Mapper</li>
                 <li class="list-group-item">Clean Code</li>
                 <li class="list-group-item">Docker</li>
               </ul>
