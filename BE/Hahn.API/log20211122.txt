@@ -155,3 +155,4 @@ Newtonsoft.Json.JsonReaderException: Unexpected character encountered while pars
    at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
 2021-11-22 20:29:17.647 +02:00 [INF] Starting Web Host
+2021-11-22 22:34:04.754 +02:00 [INF] Starting Web Host
