@@ -1,5 +1,5 @@
 ﻿using Moq;
-using MTM.Domain;
+
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -8,23 +8,24 @@ using FluentMediator;
 using System.Threading.Tasks;
 using Xunit;
 using Hahn.ApplicatonProcess.July2021.Application;
-using Hahn.Application.Services.Inventory.Dto;
+
 
 namespace MTM.XTest.Services
 {
     public class AssetServiceTests : BaseServiceTests
     {
-        private IAssetService assetService;
-        public AssetServiceTests() : base()
+        private IAssetService _assetService;
+        public AssetServiceTests(IAssetService assetService) : base()
         {
-            assetService = new AssetService(repository, _mapper, cacheManager);
+            _assetService = assetService;
         }
 
 
         [Fact]
         public async Task Create_Success()
         {
-            
+           var data= await _assetService.GetAll();
+            Assert.NotNull(data);
         }
 
         

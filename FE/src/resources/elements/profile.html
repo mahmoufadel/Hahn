@@ -4,7 +4,8 @@
   <section class="au-animate">
     <h2>${heading}</h2>
     <div class="row au-stagger">
-      <compose view="./asset.html" assets.bind="assets"></compose> 
+      <compose view="./asset.html"  view-model.bind="{ assets: assets }"></compose> 
+    
     </div>
   </section>
 </template>

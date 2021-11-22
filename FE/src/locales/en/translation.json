@@ -4,8 +4,14 @@
     "my_profession_is": "My profession is ",
     "contact_me_over_phone":"Contact me over phone "
   },
+  "login": {},
+  "asset": {"noAssets":" You have no assets."},
+  "welcome": {
+    "intro":"Hello this is Mahmoud fadel Hahn Task."
+    
+  },
   "Login": "Login",
   "friend":"faaaaaaaaaaaaaaaaaaddel",
   "userName":"User Name",
-  "Password":"Password"
+  "Password":"Password"  
  }

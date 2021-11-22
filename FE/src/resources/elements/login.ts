@@ -12,7 +12,7 @@ import { AuthService } from 'aurelia-auth';
 export class Login {
   constructor(private auth: AuthService,private i18n:I18N) {
     this.auth = auth;
-    console.log(this.i18n.tr('friend'));
+    
   };
 
   heading = 'Login';

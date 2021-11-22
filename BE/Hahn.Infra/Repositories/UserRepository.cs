@@ -13,7 +13,7 @@ namespace Hahn.ApplicatonProcess.July2021.Data.Repositories
 {
 	public class UserRepository : Repository<ApplicationUser>, IUserRepository
 	{
-		public UserRepository(EFCoreHahnContext dbContext) : base(dbContext)
+		public UserRepository(ApplicationDbContext dbContext) : base(dbContext)
 		{
 
 		}

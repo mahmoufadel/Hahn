@@ -15,10 +15,12 @@ namespace Hahn.ApplicatonProcess.July2021.Data.Repositories
 	public class AssetRepository : IAssetRepository
 	{
         private readonly IConfiguration _configuration;
+        IHttpService _httpService;
 
-        public AssetRepository(IConfiguration configuration) 
+        public AssetRepository(IConfiguration configuration, IHttpService httpService) 
 		{
             _configuration = configuration;
+            _httpService = httpService;
 
         }
 
@@ -44,18 +46,7 @@ namespace Hahn.ApplicatonProcess.July2021.Data.Repositories
 
         public async Task<List<Asset>> GetAll()
         {
-            var assetData = new AssetData();
-            using (var httpClient = new HttpClient())
-            {
-                var url = _configuration["AssetAPI"];
-                using (var response = await httpClient.GetAsync(url))
-                {
-                    string apiResponse = await response.Content.ReadAsStringAsync();
-                    assetData = JsonConvert.DeserializeObject<AssetData>(apiResponse);
-                }
-            }
-
-            return assetData.Data;
+            return await _httpService.GetAll();
         }
 
         public IQueryable<Asset> Query()

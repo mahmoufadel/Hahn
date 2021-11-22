@@ -18,14 +18,14 @@ namespace Hahn.ApplicatonProcess.July2021.Application.Services.Users
         IUserRepository _repository;
         private readonly IMapper _mapper;
         private readonly ICacheManager _cache;
-        private readonly UserManager<ApplicationUser> _userManager;
-        public UserService(IUserRepository repository, IMapper mapper, ICacheManager cacheManager,
-            UserManager<ApplicationUser> userManager)
+       
+        public UserService(IUserRepository repository, IMapper mapper, ICacheManager cacheManager
+           )
         {
             _repository = repository;
             _mapper = mapper;
             _cache = cacheManager;
-            _userManager = userManager;
+           
 
         }
         public async Task<List<UserDto>> GetAll()

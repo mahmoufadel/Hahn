@@ -48,7 +48,10 @@ export class Register {
     .ensure((o: RegisterModel) => o.LastName).required()
     .ensure((o: RegisterModel) => o.Email).required().email()
     .ensure((o: RegisterModel) => o.Age).required().min(18).max(99)
-    .ensure((o: RegisterModel) => o.Username).required().maxLength(10).minLength(5)
+    .ensure((o: RegisterModel) => o.Username).required().maxLength(20).minLength(5)
+    .ensure((o: RegisterModel) => o.Password).required().minLength(6).matches(/^[a-zA-Z0-9]{6,16}$/)
+  
+    
     
     .on(this.userInfo);
   }

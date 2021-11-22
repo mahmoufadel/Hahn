@@ -16,12 +16,26 @@ using Hahn.ApplicatonProcess.July2021.Data.Repositories;
 using Hahn.ApplicatonProcess.July2021.Application;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore.InMemory;
+using Hahn.Identity.Model;
+using Microsoft.AspNetCore.Identity;
+
+using Microsoft.AspNetCore.Http.Features.Authentication;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
+using System.Data.Entity;
+using Hahn.ApplicatonProcess.July2021.Application.Services.Users;
+using StackExchange.Redis.Extensions.Core.Configuration;
+using StackExchange.Redis.Extensions.Newtonsoft;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace MTM.XTest.Services
 {
     public class BaseServiceTests
     {
-        public readonly IAssetRepository repository;
+        public readonly IAssetRepository assetRepository;
+        public readonly IUserRepository userRepository;
+        private readonly UserManager<ApplicationUser> _userManager;
+
         public readonly IMapper _mapper;
         public readonly Mock<IMediator> _mockIMediator = new Mock<IMediator>();
         public readonly ICacheManager cacheManager = new MemoryCacheManager();
@@ -31,21 +45,16 @@ namespace MTM.XTest.Services
 
         public BaseServiceTests()
         {
-            var options = new DbContextOptionsBuilder<EFCoreHahnContext>()
-                .UseInMemoryDatabase(databaseName: "HahnDatabase")
-               .Options;
+            
 
-            var context = new EFCoreHahnContext(options);
-            repository = new AssetRepository(_configuration.Object);
+            
 
-            var mapperConfig = new MapperConfiguration(mc =>
-            {
-                mc.AddProfile(new MappingProfile());
-            });
-            _mapper = mapperConfig.CreateMapper();
+           
+
         }
+        
+       
+        
 
-
-
-    }
+	}
 }

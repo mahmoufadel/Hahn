@@ -1,0 +1,21 @@
+<template>
+  <require from="../../blur-image"></require>
+
+  <section class="au-animate">
+    <h2>${heading}</h2>
+    <div class="row au-stagger">     
+      <div class="form-group">
+        <div class="col-sm-9 col-sm-offset-3">
+          <button type="button" class="btn btn-primary" click.delegate="trackUserAssets()">
+            <i class="fa fa-plus-square-o"></i> Update Assets
+          </button>
+        </div>
+      </div>
+
+      <compose view="../elements/asset.html"  view-model.bind="{ assets: assets,tracked:true }"></compose> 
+       
+            
+         
+    </div>
+  </section>
+</template>

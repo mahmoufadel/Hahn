@@ -422,7 +422,7 @@ h1, h2, h3, h4, h5, h6 {
 #header {
   z-index: 997;
   transition: all 0.5s;
-  padding: 22px 0;
+  padding: 15px 0;
   background: #fff;
 }
 #header.header-scrolled {
@@ -1738,3 +1738,7 @@ ux-dialog-overlay.active {
   background-color: rgb(243, 233, 233);
   opacity: .5;
 }
+.headlogo{height: 30px;}
+.inner{ width: 60%;margin-top: 42px !important;}
+.card{padding: 20px;}
+.text-danger,.validation-message,.text-danger .list-group-item {color: red !important; float: left;}

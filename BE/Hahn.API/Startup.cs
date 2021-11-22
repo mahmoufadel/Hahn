@@ -60,8 +60,8 @@ namespace Hahn.API
 			var redisConfiguration = Configuration.GetSection("Redis").Get<RedisConfiguration>();
 			services.AddStackExchangeRedisExtensions<NewtonsoftSerializer>(redisConfiguration);
 
-			services.AddDbContext<EFCoreHahnContext>(opts => opts.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-			//services.AddDbContext<EFCoreHahnContext>(opts => opts.UseInMemoryDatabase(databaseName: "HahnDatabase"));
+			//services.AddDbContext<EFCoreHahnContext>(opts => opts.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+			services.AddDbContext<EFCoreHahnContext>(opts => opts.UseInMemoryDatabase(databaseName: "HahnDatabase"));
 
 			
 			services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
@@ -70,27 +70,21 @@ namespace Hahn.API
 
 
 			
+			services.AddTransient<IHttpService, HttpService>();
 			services.AddTransient<IAssetService, AssetService>();
 			services.AddTransient<IUserService, UserService>();
 			//services.AddTransient<ICacheManager, RedisCacheManager>();
 			services.AddTransient<ICacheManager, MemoryCacheManager>();
 
 
-			//services.AddDbContext<ApplicationDbContext>(opts => opts.UseInMemoryDatabase(databaseName: "ApplicationDbContext"));
-			services.AddDbContext<ApplicationDbContext>(options =>	options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+			services.AddDbContext<ApplicationDbContext>(opts => opts.UseInMemoryDatabase(databaseName: "ApplicationDbContext"));
+			//services.AddDbContext<ApplicationDbContext>(options =>	options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
 			services.AddIdentity<ApplicationUser, IdentityRole>()
 				.AddEntityFrameworkStores<ApplicationDbContext>()
 				.AddDefaultTokenProviders();
 
-			//cache 
-			// services.AddDistributedMemoryCache();
-			/*services.AddStackExchangeRedisCache(options =>
-				{
-					options.Configuration = _config["MyRedisConStr"];
-					options.InstanceName = "SampleInstance";
-				});
-			*/
+			
 
 			services.AddCors(c =>
 			{
@@ -139,7 +133,7 @@ namespace Hahn.API
 			services.AddControllers();
 			services.AddSwaggerGen(c =>
 			{
-				c.SwaggerDoc("v1", new OpenApiInfo { Title = "MTM.API", Version = "v1" });
+				c.SwaggerDoc("v1", new OpenApiInfo { Title = "Hahn.API", Version = "v1" });
 			});
 		}
 
@@ -150,7 +144,7 @@ namespace Hahn.API
 			{
 				app.UseDeveloperExceptionPage();
 				app.UseSwagger();
-				app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MTM.API v1"));
+				app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Hahn.API v1"));
 			}
 
 			app.UseHttpsRedirection();

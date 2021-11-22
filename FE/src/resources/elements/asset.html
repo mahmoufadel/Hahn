@@ -1,0 +1,29 @@
+<template bindable="assets,hasAssets">
+  <div class="row">
+    <div class="col-sm-3 ${tracked ? 'col-md-3' : 'col-md-5'}   card-container au-animate" repeat.for="asset of assets">
+      <div class="card">
+
+        <div class="avatar">
+          <img src="../../../static/asset.png" crossorigin ref="image" />
+        </div>
+        <div class="content">
+          <p class="name">${asset.name}</p>
+          <p if.bind="tracked">
+            <a show.bind="!asset.tracked" class="btn " href="#" click.trigger="addAsset(asset.id)">
+              <i class="fa fa-plus fa-3x" aria-hidden="true"></i>
+            </a>
+            <a show.bind="asset.tracked" target="_blank" class="btn " href="#" click.trigger="removeAsset(asset.id)">
+              <i class="fa fa-minus fa-3x" aria-hidden="true"></i>
+            </a>
+
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div if.bind="assets.length==0" class="col-sm-3 col-md-9 card-container au-animate" >
+      <h1 t="asset.noAssets" class="smallSpacingTop"></h1>
+    </div>
+    
+  </div>
+</template>

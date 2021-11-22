@@ -29,7 +29,7 @@ export class App {
     config.title = 'Hahn';
     config.addPipelineStep('authorize', AuthorizeStep);
     config.map([
-      { route: ['', 'welcome'], name: 'welcome', moduleId: PLATFORM.moduleName('./resources/elements/welcome'), nav: false, title: 'welcome', auth: false },
+      { route: ['', 'welcome'], name: 'welcome', moduleId: PLATFORM.moduleName('./resources/elements/welcome'), nav: true, title: 'welcome', auth: false,home:true },
       { route: 'register', name: 'register', moduleId: PLATFORM.moduleName('./resources/elements/register'), nav: true, title: 'Register', auth: false },
      
      
