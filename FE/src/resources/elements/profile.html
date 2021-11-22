@@ -1,11 +1,26 @@
 <template>
   <require from="../../blur-image"></require>
-
+  
   <section class="au-animate">
+   
     <h2>${heading}</h2>
-    <div class="row au-stagger">
-      <compose view="./asset.html"  view-model.bind="{ assets: assets }"></compose> 
+    <div class="card card0 border-0">
+      <div class="row">
+        <div class="col-md-5 col-5">
+            
+            <strong class="margin-10px-left text-orange">User Info:</strong>
+            <p>Name : ${User.firstName} ${User.lastName}</p>
+            <p class="card-text">Address : ${User.address.houseNumber} -${User.address.street} </p>
+        </div>
+      
+    </div>
     
+    <div class="row">
+      <h2>Assets</h2>
+      <div class="">
+      <compose view="./asset.html"  view-model.bind="{ assets: assets }"></compose> 
+    </div>
+  </div>
     </div>
   </section>
 </template>

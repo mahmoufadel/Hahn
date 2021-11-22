@@ -50,6 +50,8 @@ namespace MTM.XTest.Services
             Assert.Equal(user.Assets.Count, MockObjects.assetDtos.Count);
         }
 
+        
+
 
     }
 }

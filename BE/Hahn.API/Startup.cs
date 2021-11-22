@@ -40,6 +40,8 @@ using Hahn.ApplicatonProcess.July2021.Domain;
 using Hahn.ApplicatonProcess.July2021.Data.Repositories;
 using Hahn.ApplicatonProcess.July2021.Application;
 using Hahn.ApplicatonProcess.July2021.Application.Services.Users;
+using Hahn.ApplicatonProcess.July202.Identity;
+
 
 namespace Hahn.API
 {
@@ -137,8 +139,8 @@ namespace Hahn.API
 			});
 		}
 
-		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+		public void Configure(IApplicationBuilder app, IWebHostEnvironment env, UserManager<ApplicationUser> userManager)
 		{
 			if (env.IsDevelopment())
 			{
@@ -152,9 +154,7 @@ namespace Hahn.API
 			app.UseRouting();
 			app.UseAuthentication();
 			app.UseAuthorization();
-
-
-
+			MyIdentityDataInitializer.SeedUsers(userManager);
 
 			app.UseCors(options => options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
