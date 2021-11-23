@@ -1,19 +1,19 @@
 # Mahmoud Fadel Hahn Task
 <div>
-                <h2>Back end (.Net Core 5)</h2>
+                <h2>Back end (API .Net Core 5)</h2>
   <h3>Projects </h3>
   <ul class="list-group">
-    <li>Hahn.ApplicatonProcess.July2021.Web</li>
-                <li class="list-group-item">Hahn.ApplicatonProcess.July2021.Domain</li>
-                <li class="list-group-item">Hahn.ApplicatonProcess.July2021.Data</li>
-                <li class="list-group-item">Hahn.ApplicatonProcess.July2021.Application</li>
+    <li>Hahn.ApplicatonProcess.July2021.Web : Contains our 3 main API interfces (Authenticate,USer and Asset)</li>
+                <li class="list-group-item">Hahn.ApplicatonProcess.July2021.Domain : Contains all domains logic and DTOs </li>
+                <li class="list-group-item">Hahn.ApplicatonProcess.July2021.Data : Contains all repositories implementation and can be replaced to any DB provider</li>
+                <li class="list-group-item">Hahn.ApplicatonProcess.July2021.Application : Contains all services serve on our 3 main API </li>
     <liHahn.XTest</li>
     <liHahn.Cache.Redis</li>
     </ul>
-   <img width="300px" src="https://user-images.githubusercontent.com/6877794/142931520-0e44992c-2ef2-4d1d-9d92-1345afb74220.png">
-                <img width="300px" src="https://user-images.githubusercontent.com/6877794/142911699-323a7c68-bd94-421c-85b0-b1c1392d2209.png">
+   <img width="300px" src="https://user-images.githubusercontent.com/6877794/142931520-0e44992c-2ef2-4d1d-9d92-1345afb74220.png">                
                 <img width="300px" src="https://user-images.githubusercontent.com/6877794/142934291-01e57165-1749-4f1c-b712-89435dd93371.png">
-              </div>
+   <img width="300px" src="https://user-images.githubusercontent.com/6877794/142938973-2bbafecd-515f-4d15-ba81-b422ed45f0e1.png">
+</div>
               <h3>Projects Technologies </h3>
               <ul class="list-group">
                 <li class="list-group-item">.Net Core 5</li>
