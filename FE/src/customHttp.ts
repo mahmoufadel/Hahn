@@ -2,6 +2,7 @@ import { HttpClient } from 'aurelia-fetch-client';
 import { inject } from 'aurelia-framework';
 import 'isomorphic-fetch'; // if you need a fetch polyfill
 import { AuthService } from 'aurelia-auth';
+import * as environment from '../config/environment.json';
 
 @inject(AuthService)
 export class CustomHttpClient extends HttpClient {
@@ -10,7 +11,7 @@ export class CustomHttpClient extends HttpClient {
        
         this.configure(config => {
             config
-                .withBaseUrl('https://localhost:44348/api/')
+                .withBaseUrl(environment.apiUrl)
                 .withDefaults({
                     credentials: 'same-origin',
                     headers: {
@@ -18,11 +19,8 @@ export class CustomHttpClient extends HttpClient {
                         'X-Requested-With': 'Fetch'
                     }
                 })
-                //we call ourselves the interceptor which comes with aurelia-auth
-                //obviously when this custom Http Client is used for services 
-                //which don't need a bearer token, you should not inject the token interceptor
-                .withInterceptor(auth.tokenInterceptor)
-                //still we can augment the custom HttpClient with own interceptors
+                
+                .withInterceptor(auth.tokenInterceptor)               
                 .withInterceptor({
                     request(request) {
                         console.log(`Requesting ${request.method} ${request.url}`);
