@@ -20,7 +20,7 @@ namespace MTM.API.Controllers
 	[Route("api/[controller]/[action]")]
 	public class UserController : ControllerBase
 	{
-		IUserService _userService;
+        readonly IUserService _userService;
 		IAssetService _assetService;
 		public UserController(IUserService userService, IAssetService assetService)
 		{

@@ -14,12 +14,10 @@ namespace Hahn.ApplicatonProcess.July2021.Data.Repositories
 {
 	public class AssetRepository : IAssetRepository
 	{
-        private readonly IConfiguration _configuration;
         IHttpService _httpService;
 
-        public AssetRepository(IConfiguration configuration, IHttpService httpService) 
+        public AssetRepository(IHttpService httpService) 
 		{
-            _configuration = configuration;
             _httpService = httpService;
 
         }

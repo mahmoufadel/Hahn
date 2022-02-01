@@ -5,13 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Hahn.ApplicatonProcess.July2021.Domain;
+using Hahn.Cache.Redis;
 
 namespace Hahn.ApplicatonProcess.July2021.Data.Repositories
 {
     
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
-    {       
-
+    {
+   
         internal DbContext _context;
         internal DbSet<TEntity> dbSet;
 

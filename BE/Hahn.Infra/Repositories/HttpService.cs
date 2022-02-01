@@ -12,27 +12,24 @@ namespace Hahn.ApplicatonProcess.July2021.Data.Repositories
 {
     public class HttpService : IHttpService
     {
-        private readonly IConfiguration _configuration;
-        string _url;
-        public HttpService(IConfiguration configuration)
+        private readonly IHttpClientFactory _httpClientFactory;
+        public HttpService(IHttpClientFactory httpClientFactory)
         {
-            _configuration = configuration;
-            _url = _configuration["AssetAPI"];
+            _httpClientFactory = httpClientFactory;
+            
 
         }
+
         public async Task<List<Asset>> GetAll()
         {
             var assetData = new AssetData();
-            using (var httpClient = new HttpClient())
+            var httpClient = _httpClientFactory.CreateClient("AssetService");
+
+            using (var response = await httpClient.GetAsync(""))
             {
-
-                using (var response = await httpClient.GetAsync(_url))
-                {
-                    string apiResponse = await response.Content.ReadAsStringAsync();
-                    assetData = JsonConvert.DeserializeObject<AssetData>(apiResponse);
-                }
+                string apiResponse = await response.Content.ReadAsStringAsync();
+                assetData = JsonConvert.DeserializeObject<AssetData>(apiResponse);
             }
-
             return assetData.Data;
         }
     }

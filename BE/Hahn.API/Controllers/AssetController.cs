@@ -14,7 +14,7 @@ namespace MTM.API.Controllers
 	[ApiController]
 
 	[Route("api/[controller]/[action]")]
-	[Authorize]
+	//[Authorize]
 	public class AssetController : ControllerBase
 	{
 		IAssetService  _assetService;
@@ -31,8 +31,9 @@ namespace MTM.API.Controllers
 		[ActionName("GetAll")]		
 		public async Task<List<AssetDto>> GetAll()
 		{
+            var assets = await _assetService.GetAll();
 			var user = await _userService.Get(User.Identity.Name);
-			var assets= await _assetService.GetAll();
+			
 			assets.ForEach(asset => { asset.Tracked = user.Assets.Contains(asset); });
 
 			return assets;
